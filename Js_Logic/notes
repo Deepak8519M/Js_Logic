@@ -1,0 +1,210 @@
+// --------------------------------------------------------------------------------------------
+// Array Map methods
+
+// const names = ["Ajay", "Sulkahn", "raj", "Hitesh", "Kamal"];
+
+// const newNames = names.map(function (value) {
+//   return value + " Ji";
+// });
+
+// here it is compulsory that all elems are included
+// --------------------------------------------------------------------------------------------
+// Array Filter methods:
+
+// const names = ["Ajay", "Sulkahn", "raj", "Hitesh", "Kamal"];
+
+// const filterdName = names.filter(function (value) {
+//   return value == "Ajay";
+// });
+
+// console.log(filterdName);
+
+// --------------------------------------------------------------------------------------------
+
+// Destructuring in Js:
+
+// const userProfile = {
+//     username: "webDevMaster",
+//     age: 28,
+//     contact: {
+//       email: "devmaster@gmail.com",
+//       phone: "123-456-7890",
+//     },
+//     location: {
+//       country: "USA",
+//       city: "San Francisco",
+//       coordinates: {
+//         lat: 37.7749,
+//         long: -122.4194,
+//       },
+//     },
+//     skills: ["HTML", "CSS", "JavaScript", "React"],
+//     experience: {
+//       years: 5,
+//       projects: [
+//         { name: "Portfolio Website", tech: ["HTML", "CSS"] },
+//         { name: "E-commerce Platform", tech: ["React", "Node.js", "MongoDB"] },
+//       ],
+//     },
+//     social: {
+//       twitter: "@webDevMaster",
+//       linkedIn: "linkedin.com/in/devmaster",
+//     },
+//   };
+
+//   let [_, b, c, d] = userProfile.skills;
+
+//   let { username, age } = userProfile;
+
+//   let { email, phone } = userProfile.contact;
+
+//   let { country, city } = userProfile.location;
+//   let { lat, long } = userProfile.location.coordinates;
+
+//   console.log(username);
+//   console.log(age);
+
+//   console.log(email);
+//   console.log(phone);
+
+//   console.log(country);
+//   console.log(city);
+
+//   console.log(lat);
+//   console.log(long);
+
+//   // console.log(a);
+//   console.log(b);
+//   console.log(c);
+//   console.log(d);
+
+// --------------------------------------------------------------------------------------------
+// Spread in Js for Array:
+
+// const names = ["Ajay", "Sulkahn", "raj", "Hitesh", "Kamal"];
+
+// var copyNames = [...names];
+
+// copyNames.pop();
+
+// console.log(names);
+// console.log(copyNames);
+
+// console.log(copyNames.join(" + "));
+
+// --------------------------------------------------------------------------------------------
+
+// Spread in Js for object:
+
+// const userProfile = {
+//     username: "webDevMaster",
+//     age: 28,
+//     contact: {
+//       email: "devmaster@gmail.com",
+//       phone: "123-456-7890",
+//     },
+//   };
+
+//   const newObj = { ...userProfile };
+
+//   newObj.username = "Ajay";
+
+//   console.log(userProfile);
+//   console.log(newObj);
+// }
+
+// --------------------------------------------------------------------------------------------
+// function abcd(...a) {
+//     console.log(...a.join("+"));
+//   }
+
+//   abcd(1, 2, 34, 45, 6, 78, 6);
+// --------------------------------------------------------------------------------------------
+
+// Mergin two arrays of data fetched from seperate API'S into a sinlge list
+
+// const names = ["Ajay", "Sulkahn", "raj", "Hitesh", "Kamal"];
+// const lastNames = ["yoen", "kahn", "Kraj", "iktesh", "ajamal"];
+
+// const fullNames = [...names, ...lastNames];
+
+// console.log(fullNames);
+
+// --------------------------------------------------------------------------------------------
+
+// Filtering an array of objs to display items based on search query 9e.g., filtering products by name.)
+
+// const products = [
+//   { name: "Laptop", price: 1000 },
+//   { name: "Phone", price: 500 },
+//   { name: "Tablet", price: 300 },
+//   { name: "Monitor", price: 200 },
+// ];
+
+// const newFilteredProds = products.filter(function (product) {
+//   return product.price >= 300;
+// });
+
+// console.log(newFilteredProds);
+
+// --------------------------------------------------------------------------------------------
+
+// Mapping over an array of user data to create a list of user ards.
+
+// const users = [
+//   { name: "John", age: 21 },
+//   { name: "ajay", age: 21 },
+//   { name: "Kamal", age: 21 },
+//   { name: "Aysg", age: 21 },
+// ];
+
+// const mapUsers = users.map((user) => {
+//   return `<div>
+//                 <h3>${user.name}</h3>
+//                 <h5>${user.age}</h5>
+//             </div>`;
+// });
+
+// for (let itr of mapUsers) {
+//   document.querySelector("#main").innerHTML += itr;
+// }
+
+// --------------------------------------------------------------------------------------------
+
+// Grouping an array of objects by a specific  property (e.g., Grouping users by role)
+
+// const users = [
+//   { name: "John", age: 21, role: "admin" },
+//   { name: "ajay", age: 21, role: "DBA" },
+//   { name: "Kamal", age: 21, role: "admin" },
+//   { name: "Aysg", age: 21, role: "SDE" },
+// ];
+
+// let object = {};
+
+// users.forEach(function (user) {
+//   if (object[user.role]) {
+//     object[user.role].push(user);
+//   } else {
+//     object[user.role] = [];
+//     object[user.role].push(user);
+//   }
+// });
+
+// console.log(object);
+
+// --------------------------------------------------------------------------------------------
+
+// Removing or updating a specfic object in an array of data based on unique id
+// const users = [
+//   { id: 1, name: "John", age: 21, role: "admin" },
+//   { id: 2, name: "ajay", age: 21, role: "DBA" },
+//   { id: 3, name: "Kamal", age: 21, role: "admin" },
+//   { id: 4, name: "Aysg", age: 21, role: "SDE" },
+// ];
+
+// let newUser = users.filter(function (user) {
+//   return user.id !== 2;
+// });
+
+// console.log(newUser);
